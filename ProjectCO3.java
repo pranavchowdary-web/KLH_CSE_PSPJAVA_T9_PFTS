@@ -19,39 +19,20 @@ public class ProjectCO3 {
             System.out.println("4. Exit");
             System.out.print("Enter your choice (1-4): ");
 
-            int choice = 0;
-
-            try {
-                choice = Integer.parseInt(sc.nextLine());
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid input! Please enter a valid number (1-4).");
-                continue; 
-            }
-
+            int choice = sc.nextInt();
+            sc.nextLine(); 
             switch (choice) {
                 case 1:
                     if (workoutCount < 100) {
                         System.out.print("Enter Exercise Name (e.g., Running): ");
                         exerciseNames[workoutCount] = sc.nextLine();
-                        while (true) {
-                            try {
-                                System.out.print("Enter Duration (in minutes): ");
-                                durations[workoutCount] = Integer.parseInt(sc.nextLine());
-                                break; 
-                            } catch (NumberFormatException e) {
-                                System.out.println("Please enter a whole number for minutes!");
-                            }
-                        }
 
-                        while (true) {
-                            try {
-                                System.out.print("Enter Calories Burned: ");
-                                calories[workoutCount] = Double.parseDouble(sc.nextLine());
-                                break; 
-                            } catch (NumberFormatException e) {
-                                System.out.println("Please enter a valid number for calories!");
-                            }
-                        }
+                        System.out.print("Enter Duration (in minutes): ");
+                        durations[workoutCount] = sc.nextInt();
+
+                        System.out.print("Enter Calories Burned: ");
+                        calories[workoutCount] = sc.nextDouble();
+                        sc.nextLine();
 
                         workoutCount++;
                         System.out.println("Workout recorded successfully!");
