@@ -67,7 +67,7 @@ public class ProjectCO3 {
                         }
 
                         System.out.println("\n--- SUMMARY METRICS ---");
-                        System.out.println("Total Workouts Logged: "     + workoutCount);
+                        System.out.println("Total Workouts Logged: " + workoutCount);
                         System.out.println("Total Time Spent: " + totalDuration + " minutes");
                         System.out.println("Total Calories Burned: " + totalCalories + " kcal");
                     }
